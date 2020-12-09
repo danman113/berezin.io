@@ -1,0 +1,17 @@
+@import "../node_modules/picnic/picnic.min.css";
+
+main {
+  margin-top: 53px;
+}
+
+.rendercanvas {
+  width: 100vw;
+  height: calc(100vh - 53px);
+  touch-action: none;
+  z-index: -1;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+}
