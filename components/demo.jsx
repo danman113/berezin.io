@@ -55,7 +55,7 @@ const setupRenderCanvas = (canvas) => {
   c.frame(({ time }) => {
     // clear contents of the drawing buffer
     c.clear({
-      color: [0, 0, 0, 0],
+      color: [51 / 255, 51 / 255, 77 / 255, 1],
       depth: 1,
     })
 

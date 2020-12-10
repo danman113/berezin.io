@@ -5,7 +5,7 @@ main {
 }
 
 .rendercanvas {
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 53px);
   touch-action: none;
   z-index: -1;
@@ -14,4 +14,34 @@ main {
 
 .overlay {
   position: absolute;
+  color: white;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1000px;
+}
+
+.gutter {
+  padding: 0 6px;
+}
+
+.card {
+  min-height: 300px;
+}
+
+.center-block {
+  display: block;
+  margin: auto;
+}
+
+img.img-circle {
+  border-radius: 50%;
+}
+
+.text-center {
+  text-align: center;
 }
