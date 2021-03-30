@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import regl from 'regl'
+import { map } from '../utils/math'
 
 const setupRenderCanvas = (canvas) => {
   const { width, height } = canvas.getBoundingClientRect()
@@ -14,7 +15,8 @@ const setupRenderCanvas = (canvas) => {
     varying vec3 vColor;
     uniform vec4 color;
     void main() {
-      gl_FragColor = vec4(vColor, 1);
+      // gl_FragColor = vec4(vColor, 1);
+      gl_FragColor = vec4(color.rgb * vColor, 1);
     }`,
 
     vert: `
@@ -59,9 +61,8 @@ const setupRenderCanvas = (canvas) => {
       depth: 1,
     })
 
-    // draw a triangle using the command defined above
     drawTriangle({
-      color: [Math.cos(time * 0.001), Math.sin(time * 0.0008), Math.cos(time * 0.003), 1],
+      color: [...([Math.cos(time * 1.001), Math.sin(time * 1.0008), Math.cos(time * 1.003)].map(n => map(n, -1, 1, 0, 1))), 1],
     })
   })
 }
