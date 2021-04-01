@@ -16,6 +16,7 @@ const setupRenderCanvas = (canvas) => {
     uniform vec4 color;
     void main() {
       // gl_FragColor = vec4(vColor, 1);
+      // This works because both color and vColor are 0-1 bounded RGB values
       gl_FragColor = vec4(color.rgb * vColor, 1);
     }`,
 
