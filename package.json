@@ -7,7 +7,7 @@
     "build": "next build",
     "check": "prettier --check '{pages,components}/**/*.{ts,tsx,js,jsx}'",
     "format": "prettier --write '{pages,components}/**/*.{ts,tsx,js,jsx}'",
-    "start": "next start",
+    "start": "npm run deploy",
     "export": "next export",
     "_writeCname": "echo berezin.io > out/CNAME",
     "writeCname": "echo testing",
