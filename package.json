@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_ENV=production next build && npm run deploy",
     "check": "prettier --check '{pages,components}/**/*.{ts,tsx,js,jsx}'",
     "format": "prettier --write '{pages,components}/**/*.{ts,tsx,js,jsx}'",
-    "start": "npm run deploy",
+    "start": "next start",
     "export": "next export",
     "_writeCname": "echo berezin.io > out/CNAME",
     "writeCname": "echo testing",
-    "deploy": "NODE_ENV=production npm run build && npm run export && touch out/.nojekyll && npm run writeCname && rm -rf docs && cp -rf out docs && rm -rf out"
+    "deploy": "npm run export && touch out/.nojekyll && npm run writeCname && rm -rf docs && cp -rf out docs && rm -rf out"
   },
   "dependencies": {
     "next": "10.0.3",
